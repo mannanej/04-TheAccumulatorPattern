@@ -50,11 +50,11 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #          of integers from r to s, inclusive, whose cosines are positive.
 #          It has at least 5 distinct errors (one per line).  What are they?
 #
-#              for k in range(r - s):       for k in range(r, s):
-#                  count = 0                should be outside the loop
-#                  if math.cos(r) > 0:      math isn't imported
-#                      count = 1            should be outside the loop
-#                  return count             shouldn't be in the if statement
+#              for k in range(r - s):       should be (s + 1) - r
+#                  count = 0                should be before the loop
+#                  if math.cos(r) > 0:      should be r + k
+#                      count = 1            should be count = count + 1
+#                  return count             should be after the loop
 #
 #     f. The code in the "graphics accumulation" example below includes:
 #            for _ in range(n):
