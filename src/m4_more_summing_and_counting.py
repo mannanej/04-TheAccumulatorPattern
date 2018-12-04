@@ -303,7 +303,7 @@ def count_cosines_from(m, n, x):
             value1 = value1 + 1
     return value1
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
@@ -337,14 +337,14 @@ def run_test_sum_unit_fractions_from():
     # -------------------------------------------------------------------------
 
     # Test 2:
-    expected = 6.853  # This is APPROXIMATELY the correct answer.
-    answer = sum_unit_fractions_from(10, 9000)
+    expected = 3.832  # This is APPROXIMATELY the correct answer.
+    answer = sum_unit_fractions_from(20, 900)
     print('Test 2 expected:', expected, '(approximately)')
     print('       actual:  ', answer)
 
     # Test 3:
-    expected = 0.545635  # This is APPROXIMATELY the correct answer.
-    answer = sum_unit_fractions_from(6, 9)
+    expected = 0.268  # This is APPROXIMATELY the correct answer.
+    answer = sum_unit_fractions_from(7, 8)
     print('Test 3 expected:', expected, '(approximately)')
     print('       actual:  ', answer)
 
@@ -360,8 +360,12 @@ def sum_unit_fractions_from(m, n):
          which is about 0.545635
       -- sum_unit_fractions_from(10, 9000)  returns about  6.853
     """
+    value1 = 0
+    for k in range((n + 1) - m):
+        value1 = value1 + 1/(k + m)
+    return value1
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
